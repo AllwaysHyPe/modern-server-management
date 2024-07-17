@@ -1,0 +1,4 @@
+---
+collections:
+    - chocolatey.chocolatey
+    - community.windows

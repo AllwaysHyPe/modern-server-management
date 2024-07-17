@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: yes
+  tasks: 
+  - win_ping:
+
+  - debug: var=ansible_facts
+  - pause: minute=5

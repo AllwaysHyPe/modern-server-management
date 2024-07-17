@@ -1,0 +1,52 @@
+---
+- name: Server Configuration
+  hosts: all
+
+  vars:
+    ansible_connection: "winrm"
+    ansible_winrm_server_cert_validation: "ignore"
+    ansible_user: "ansible"
+
+  tasks:
+    # Import secrets from Ansible Vault
+    - name: Import Secrets
+      ansible.builtin.include_vars:
+        file: vars/secrets.yml
+
+    - name: Install chocolatey
+      chocolatey.chocolatey.win_chocolatey:
+        name: chocolatey
+        state: present
+
+    # Install Applications from public chocolatey repository
+    - name: Install Base Applications
+      chocolatey.chocolatey.win_chocolatey:
+        name:
+          - powershell-core
+          - vscode
+          - 7zip.install
+          - notepadplusplus.install
+        state: latest
+
+    # Update all applications installed via chocolatey
+    - name: Update Installed Applications
+      chocolatey.chocolatey.win_chocolatey:
+        name: all
+        state: latest
+
+    # Create C:\Temp
+    - name: Create Temp Folder
+      ansible.windows.win_file:
+        path: C:\Temp
+        state: directory
+
+    # Enable services that are wanted
+    - name: Enable Remote Registry
+      ansible.windows.win_service:
+        name: "Remote Registry"
+        start_mode: auto
+        state: started
+
+  # Import arc-onboard.yml playbook 
+- name: Azure Arc Playbook import
+  ansible.builtin.import_playbook: azure/arc-onboard.yml

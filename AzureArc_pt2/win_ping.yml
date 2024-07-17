@@ -1,0 +1,8 @@
+---
+# Playbook to test communication to Windows hosts with the win_ping module
+  - name: Ping 
+    hosts: all
+
+    tasks:
+  - name: Ping
+    win_ping:
