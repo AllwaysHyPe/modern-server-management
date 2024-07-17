@@ -1,0 +1,26 @@
+---
+- name: Application Configuration
+  hosts: all
+  gather_facts: true
+  tasks:
+
+  - name: Install chocolatey
+    chocolatey.chocolatey.win_chocolatey:
+      name: 'chocolatey'
+      state: 'latest'
+
+  # Install Applications from public chocolatey repository
+  - name: Install Base Applications
+    chocolatey.chocolatey.win_chocolatey:
+      name:
+          - powershell-core
+          - vscode
+          - 7zip.install
+          - notepadplusplus.install
+      state: latest
+
+  # Update all applications installed via chocolatey
+  - name: Update Installed Applications
+    chocolatey.chocolatey.win_chocolatey:
+      name: all
+      state: latest

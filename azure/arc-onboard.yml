@@ -1,14 +1,14 @@
 ---
 - name: Onboard Linux and Windows Servers to Azure Arc-enabled servers with public endpoint connectivity
   hosts: all
-  # vars:
-  #   azure:
-  #     service_principal_id: 'INSERT-SERVICE-PRINCIPAL-CLIENT-ID'
-  #     service_principal_secret: 'INSERT-SERVICE-PRINCIPAL-SECRET'
-  #     resource_group: 'INSERT-RESOURCE-GROUP'
-  #     tenant_id: 'INSERT-TENANT-ID'
-  #     subscription_id: 'INSERT-SUBSCRIPTION-ID'
-  #     location: 'INSERT-LOCATION'
+  vars:
+     azure:
+        service_principal_id: '98878b01-3ba2-4961-b8f6-beae2d8fede4'
+        service_principal_secret: '1iT8Q~TfjutGeaySLXXNbp.qYocnK3LqEfcs6bed'
+        resource_group: 'rgANSIBLE2024'
+        tenant_id: '3b8b1c65-d765-4297-9e77-7c376421b32c'
+        subscription_id: '618f1a9a-63a8-4f09-8d0f-1dabd231590b'
+        location: 'West US 2'
   tasks:
   - name: Check if the Connected Machine Agent has already been downloaded on Linux servers
     stat:

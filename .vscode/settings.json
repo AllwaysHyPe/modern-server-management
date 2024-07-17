@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "hosts": "ini",
+        "**/*.yml": "ansible"
+    },
+    "files.defaultLanguage": "ansible",
+    "terminal.integrated.shell.windows": "C:\\Windows\\Subsystem32\\bash.exe",
+    "ansible.python.interpreterPath": "/bin/python3"
+    
+}
