@@ -7,7 +7,7 @@ Special thanks to Josh King for his presentations:
 - [*Ansible 101: For the Windows SysAdmin*](https://www.youtube.com/watch?v=SqO2HkKep90) 
 - [*Your Superpowered Windows Infrastructure Toolkit: Ansible, PowerShell, and Chocolatey*](https://www.youtube.com/watch?v=oKJtlEenaog&t=4664s) 
 
-and to Jeremy Murrah for his presentation [*Ansible for the Windows Admin presentation*](https://youtu.be/ZI20Y10OKd0)
+and to Jeremy Murrah for his presentation [*Ansible for the Windows Admin*](https://youtu.be/ZI20Y10OKd0)
 - [*Ansible for the Windows Admin GitHub repo*](https://github.com/murrahjm/PSSummit2019)
 
 
