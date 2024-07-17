@@ -1,0 +1,17 @@
+# inventory file lists hosts that can be acted upon
+# hosts sorted into groups to apply variables and tasks in bulk
+# hosts can be in multiple groups
+# there's a whole child group thing that we won't get into but you can read about here:
+# https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
+
+[windows]
+demo-01 ansible_host=192.168.50.210
+demo-02 ansible_host=192.168.50.211
+
+[windows:vars]
+ansible_user=ansible
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+ansible_winrm_transport=ntlm
+ansible_winrm_scheme=http
+ansible_port=5985
