@@ -1,6 +1,6 @@
 # Modern Server Management with Ansible
 
-This repository is intended for configuring Ansible within a lab environment and following the the blogpost [*Modern Server Management with Ansible*](www.allwayshype.com/allways-hype/patch-em-all-post-session-ksrk8)
+This repository is intended for configuring Ansible within a lab environment and following the the blogpost [*Modern Server Management with Ansible*](https://www.allwayshype.com/allways-hype/modern-server-management-with-ansible)
 
 ## Community Resources
 Special thanks to Josh King for his presentations:
