@@ -19,6 +19,8 @@ https://learn.microsoft.com/en-us/windows/wsl/file-permissions
 
 Borrowing Jeremy's GitHub notes: 
 
+add this section to /etc/wsl.conf
+
 ```vi
 [automount]
 options = "metadata,umask=22,fmask=11"
